@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            //Array:
+
+            let nomes = ["João","Cleiton","Cleveron"]; /*Variável nomes recebe um array com 3 posições (0,1,2), onde
+            na posição 0= "João" 1= "Cleiton" 2= "Cleverton". */
+            console.log(nomes)
+           console.log(nomes[0]) // Imprime no console o conteúdo da posição 0, que é = "João"
+           console.log(nomes[1]) // Imprime no console o conteúdo da posição 1, que é = "Cleiton"
+           console.log(nomes[2]) // Imprime no console o conteúdo da posição 2, que é = "Cleveron"
+
+           nomes.push("Carlos"); //Push é utilizado para inserir mais uma posição no meu array.
+           nomes.push("Ana");
+           console.log(nomes[nomes.length-1]) //nomes.length -1 traz a ultima posição do array, ficando nomes[5-1=4]
+
+           //Percorrer  array:
+           //for(contador ; condição ; incremento){ conteudo }
+           for (let cont = 0; cont <nomes.length; cont++){
+                console.log(nomes[cont]);
+           }
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
