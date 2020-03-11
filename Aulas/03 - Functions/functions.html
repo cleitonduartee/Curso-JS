@@ -27,7 +27,16 @@
 
             //Calback 2 : Nesse exemplo a função foi criada dentro da chamada da função.
             let s2 = dividir(50,2, function(saida){
-                alert(saida);
+                //alert(saida);
+            })
+
+            //Percorrendo array por forEach
+            let nomes = ["Joa","Cleiton","Maria","Cleverton"];
+
+            nomes.forEach(function(item, index,array){
+                console.log(item)
+                console.log(index)
+                console.log(array)
             })
 
         </script>
