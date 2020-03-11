@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+            /*Variaveis: nome da variável é o identificador, e o conteúdo armazenado é o tipo 
+            const : é usado para criar a variável que terá um tipo constante, ou seja não muda.
+            let: é usado para criar uma variável que será usada no scopo local, e que pode mudar o tipo.
+            var: é usado para criar uma variável que será usado no scopo global, e que pode mudar o tipo.*/
+
+            //Ex: const
+            const nome = "cleiton" // a variável nome não poderar alterar o conteudo, pois foi criado como const
+            console.log(nome)
+            //nome = "joao" 
+            // ERRO: "assignment to constant variable" (atribuição a variável constante)
+
+            //Ex: let
+            let nome2 = "cleitonn"
+            console.log(nome2)
+            nome2 = "joao"
+            console.log(nome2) //Correto:  Variável do tipo Let pode alterar conteúdo
+
+             //Ex: var
+             var nome3 = "cleitonnn"
+            console.log(nome3)
+            nome3 = "joaoo"
+            console.log(nome3) //Correto:  Variável do tipo var pode alterar conteúdo
+
+            //Scopo:
+            //let:
+            
+            if(true){
+                let numero1 = 15;                
+            }
+            //console.log(numero1) 
+            /*ERRO: numero1 is not defined( numero1 não está definido). Isso acontece pq 
+            a variável numero1 foi criado como let, e só é acessivél no scopo do if (scopo local).*/
+
+            //Var:
+            
+            if(true){
+                var numero2 = 10;                
+            }
+            console.log(numero2) /* Correto: Variável numero2 foi criado como var, é acessivel no contexto global,
+            ou seja, fora do if */
+
+            
+            // OBS: para verificar os ERROs, retirar os comentários dos mesmo e verificar a mensagem no console.log
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
