@@ -1,11 +1,35 @@
 <html>
     <head>
         <script>
-            //Function é um bloco de código reutilizável... 
-            function somar(){ 
-                console.log("chamou somar...")
+            /*Function é um bloco de código reutilizável... 
+            esse n1 e n2 detro da parentese é oque chamamos de parâmetro da função*/
+            function somar(n1, n2){ 
+                let somar = n1 + n2;
+                //console.log(somar)
+                return somar;
             }
-            somar() // Chamando a função
+            function imprimeConsole(text){
+                console.log("Resultado: "+text)
+            }
+
+            somar(10,20) // Chamando a função... o 10 e o 20 é o argumento passado para função.
+            let s1 = somar(15,35)
+            //console.log(s1)
+            imprimeConsole(s1) //s1 obteve um retorno da soma de n1 e n2, agora esta sendo passado de argumento na função.
+
+
+            //calback:
+            function dividir(n1,n2,f){
+                let resultado = n1/n2;
+                f(resultado);
+            }
+            dividir(25,5,imprimeConsole) //Quando chamado a função dividir, já é passado como argumento outra função.(Calback)
+
+            //Calback 2 : Nesse exemplo a função foi criada dentro da chamada da função.
+            let s2 = dividir(50,2, function(saida){
+                alert(saida);
+            })
+
         </script>
     </head>
     <body>
