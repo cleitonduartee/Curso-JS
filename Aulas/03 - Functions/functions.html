@@ -9,7 +9,7 @@
                 return somar;
             }
             function imprimeConsole(text){
-                console.log("Resultado: "+text)
+                console.log("Resultado: "+ text)
             }
 
             somar(10,20) // Chamando a função... o 10 e o 20 é o argumento passado para função.
@@ -31,13 +31,24 @@
             })
 
             //Percorrendo array por forEach
-            let nomes = ["Joa","Cleiton","Maria","Cleverton"];
+            // let nomes = ["Joa","Cleiton","Maria","Cleverton"];
 
-            nomes.forEach(function(item, index,array){
-                console.log(item)
-                console.log(index)
-                console.log(array)
-            })
+            // nomes.forEach(function(item, index,array){
+            //     console.log(item)
+            //     console.log(index)
+            //     console.log(array)
+            // })
+
+            //arrow Function
+                    //sintaxe sem arrow function
+                    dividir(25,5,function(saida){
+                        console.log("Sem ArrowFunctions "+saida)
+                    })
+                    //sintaxe com arrow function
+                    dividir(100,5,(saida)=>{
+                        console.log("Com ArrowFunctions: "+saida)
+                    })
+
 
         </script>
     </head>
