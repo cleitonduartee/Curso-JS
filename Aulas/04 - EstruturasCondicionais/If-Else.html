@@ -1,7 +1,24 @@
 <html>
     <head>
         <script>
+            //Condicionamento 
+                    let aluno = "Cleiton"
+                    let faltas = 250;
+                    let nota = 7;
+                    let aprovado = faltas<=250 && nota>=7; // A variável "aprovado" vai receber um booleano (True ou False)
+                    if(aprovado)// o if só exibido se o resultado for TRUE
+                    {
+                        console.log(`Parabéns ${aluno}! Você está Aprovado.`)
+                    }else //caso o resultado não for TRUE no if, automaticamente é false, sendo assim o conteudo do else é exibido
+                    {
+                        console.log(`infelizmente ${aluno}, Você está Reprovado!`)
+                    }
 
+                    //if-else ternário:
+                        //condição ? se verdadeiro : se falso (aprovado = condição ?"Aprovado" = condição verdadeira : "Reprovado" condição falsa)
+
+                    let resultado = aprovado ? "Aprovado!":"Reprovado!"
+                    console.log(resultado)
         </script>
     </head>
     <body>
