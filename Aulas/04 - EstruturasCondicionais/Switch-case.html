@@ -1,7 +1,29 @@
 <html>
     <head>
         <script>
+            //Switch-case: Existe um parametro/condição no (Switch), com a condição determinada, vai ser procurado nas case a condição igual a do switch.
 
+                //ex: 
+                var n1;
+                var n2;
+                var resultado = (n1+n2)/2;
+                console.log(resultado)
+
+                switch(true){ // o case que tiver a condição true será exibido.
+                    case resultado >=7:
+                        console.log("Aprovado");
+                        break; // o break serve para para o loop quando for encontrado a condição a ser exibido.
+                    case resultado >=4 && resultado <7:
+                        console.log("Exame")
+                        break;
+                    case resultado <4:
+                        console.log("Reprovado")
+                        break;
+                    default:
+                        console.log("Notas não foi lancada!")
+
+                } 
+                    
         </script>
     </head>
     <body>
