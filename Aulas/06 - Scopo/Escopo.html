@@ -14,7 +14,17 @@
             console.log(x) // CORRETO: n foi criado em um scopo glogal, como var. 
             console.log(window.x) //x se tornou uma propriedado do window
 
+            //NO Scopo Function, a variável do tipo Var, não se torna mais global e propriedade do window igual no IF-else, e sim um um propriedade local do scopo da function
+            function teste(){
 
+                if(true){
+                    var t = 25; //Variável T é "global" dentro da function.
+                }
+                console.log("T = "+t)//CORRETO: Está dentro da function.
+            }
+            console.log("T = "+t) // ERRO: Está fora do scopo da function.
+
+            teste();
             // //For
             // for(item of item){
 
