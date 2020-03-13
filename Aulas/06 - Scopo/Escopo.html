@@ -4,24 +4,31 @@
         //Scopo: 
             //if-else:
             if(true){
-                
-            }else{
+                let n = 10;                
+            }
+           // console.log(n) // ERRO: n is not defined (n não foi definido, pq n foi criado em um scopo local como let)
 
+            if(true){
+                var x = 15;
             }
-            //For
-            for(item of item){
+            console.log(x) // CORRETO: n foi criado em um scopo glogal, como var. 
+            console.log(window.x) //x se tornou uma propriedado do window
 
-            }
-            //switch-case
-            switch("teste"){
-                case test:
-                break;
-            }
-            //function
-            function teste(){
-                let x = "teste";
-                return x
-            }
+
+            // //For
+            // for(item of item){
+
+            // }
+            // //switch-case
+            // switch("teste"){
+            //     case test:
+            //     break;
+            // }
+            // //function
+            // function teste(){
+            //     let x = "teste";
+            //     return x
+            // }
 
         </script>
     </head>
