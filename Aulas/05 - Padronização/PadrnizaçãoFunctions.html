@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script>
+            // Criar uma funcão capaz de calcular a media:
+               // Ex: 01
+                    function media (n1,n2,f){
+                        let result = (n1+n2)/2;
+                        let situação =  f(result);
+                        return `Nota Final: ${result} -- ${situação}`;
+                    }
+                    function situacao(text){
+                        if (text >=7){
+                            return "Aprovado";
+                        }else if (text >=4 && text <7){
+                            return "Recuperação";
+                        }
+                        else{
+                            return "Reprovado";
+                        }
+                    }
+                    console.log(media(6,6,situacao))
+               //Ex: 02 - retornando um objeto
+
+                    function media1 (n1,n2){
+                        let result = (n1 + n2)/2;
+                        return result;
+                    }
+                    function situacao1 (n1,n2){
+                       let resMedia= media1(n1,n2);                     
+                       if (resMedia >=7){
+                            return {situação: "Aprovado", Média: resMedia};
+                        }else if (resMedia >=4 &&resMedia <7){
+                            return {situação:"Recuperação", Média: resMedia};
+                        }
+                        else{
+                            return {situação:"Reprovado", Média: resMedia};
+                        }
+                    }
+                    console.log(situacao1(7,7.2));
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
