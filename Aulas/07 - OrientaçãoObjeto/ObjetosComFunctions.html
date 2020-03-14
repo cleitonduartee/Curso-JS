@@ -1,11 +1,32 @@
 <html>
     <head>
         <script>
+            //Orientação a Objeto:
+                    //01 - Com functions:
+                        //A função criarPessoa, cria um objeto com a propriedade nome e armazena o endereço desse objeto na variável temporária let pessoa, e devolve para quem a o chamou o endereço que está armazenada na variável let pessoa. 
+                        // function criarPessoa(nome){
+                        //     let pessoa = {
+                        //         nome : nome
+                        //     }
+                        //     return pessoa
+                        // }
+                        // let p1 = criarPessoa("Cleiton")//p1 aponta para o objeto que a função criou
+                        // console.log(p1)
+
+                    //02 - Com functions usando propriedade this:
+                       // A função criarPessoa, quando instanciada por quem a chamou, cria um objeto com a propriedade nome, e devolve para quem a o chamou. 
+                        function criarPessoa(nome,idade){
+                            this.nome = nome;
+                            this.idade = idade
+                            
+                        }
+                        let p2 = new criarPessoa("Cleiton",30)// o comando new é para instanciar um objeto do tipo criarPessoa.
+
 
         </script>
     </head>
     <body>
         
-        
+
     </body>
 </html>
