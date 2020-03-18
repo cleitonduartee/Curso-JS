@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <script>
+            
+           class Empresa{
+               constructor(){
+                   this.nome = "Esporte Total";
+                   this.endereço = "Rua: São João, nº2 Campo Grande-MS";
+               }
+                   
+                   enderecoCompleto(){
+                       return `              ## ${this.nome} ##
+   ${this.endereço}`
+                   }
+               }
+           
+        //    let t = new Empresa();
+        //    console.log(t.enderecoCompleto())
+         class Vendedor{
+             constructor(){
+                 this.nome = "Cleiton Duarte ";
+                 this.setor = "Peças";                 
+             }
+         }
+         class Cliente {
+             constructor(){
+                 this.nome = "Cleverton Duarte"
+                 this.contato = 99999999;
+                 this.endereço = "Rua: Livino nº55 Campo Grande-MS"
+             }
+
+                 clientecompleto(){
+                     return`   Nome: ${this.nome}
+   Endereço: ${this.endereço}
+   Contato: ${this.contato}`
+                     
+                 }
+             }
+            //  let t = new Cliente();
+            // console.log(t.clientecompleto())
+
+            class ProdutoA{
+                constructor(){
+                    this.nome= "Bicicleta"
+                    this.preco = 160.00;
+                    this.unidadeMedida = "UN";
+                    this.quantidade= 30; 
+                    
+                }
+                vender(qtd){
+                    if(qtd<=this.quantidade){
+                        this.quantidade = this.quantidade - qtd;
+                        let dados = this.dadosProdutoA(qtd);
+                        return dados;
+                    }else{
+                        return false;
+                    }
+                }
+                comprar(qtd){
+                    if(qtd>=0){
+                        this.quantidade = this.quantidade + qtd;
+                    }
+                }
+
+                dadosProdutoA(qtd){
+                    let subTotal = this.preco * qtd;
+                    return`        ${this.nome}
+        Preço Unitário: ${this.preco.toFixed(2)}
+        Quantidade: ${qtd}${this.unidadeMedida}
+        Sub-Total: ${subTotal.toFixed(2)}`
+                }
+            
+                
+            }
+            class ProdutoB{
+                constructor(){
+                    this.nome= "Patinete";
+                    this.preco = 80.00;
+                    this.unidadeMedida = "UN";
+                    this.quantidade= 50; 
+                }
+                vender(qtd){
+                    if(qtd<=this.quantidade){
+                        this.quantidade = this.quantidade - qtd;
+                        let dados = this.dadosProdutoB(qtd);
+                        return dados;
+                    }else{
+                        return false;
+                    }
+               }
+               comprar(qtd){
+                    if(qtd>=0){
+                        this.quantidade = this.quantidade + qtd;
+                    }
+                }
+                dadosProdutoB(qtd){
+                    let subTotal = this.preco * qtd;
+                    return`        ${this.nome}
+        Preço Unitário: ${this.preco.toFixed(2)}
+        Quantidade: ${qtd}${this.unidadeMedida}
+        Sub-Total: ${subTotal.toFixed(2)}`
+                }
+            }
+            // let t = new ProdutoA();
+            // console.log(t.vender(60))
+            class VendaDemercadoria{
+                constructor(n1,n2){
+                    this.produtoA = new ProdutoA();
+                    this.produtoB = new ProdutoB();
+                    this.empresa = new Empresa();
+                    this.cliente = new Cliente();
+                    this.numeroNota = 100;
+                    this.totalprodutoA = n1;
+                    this.totalprodutoB = n2;
+                }
+                sequenciaNota(){
+                    this.numeroNota = this.numeroNota +1;
+                    return this.numeroNota;
+                }
+                dadosNota(){
+                    let total = (this.totalprodutoA*this.produtoA.preco)+(this.totalprodutoB*this.produtoB.preco);
+                    return `   Numero Nota Fiscal: ${this.sequenciaNota()}
+   ------------------------------------------------------------------------
+   ${this.empresa.enderecoCompleto()}
+   ------------------------------------------------------------------------
+   Produtos:   
+   ${this.produtoB.vender(this.totalprodutoB)} 
+   ${this.produtoA.vender(this.totalprodutoA)}    
+   ------------------------------------------------------------------------
+   Total Nota Fiscal: ${total.toFixed(2)}                 `
+                }                
+            }
+            let t = new VendaDemercadoria(25,35);
+            console.log(t.dadosNota())
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

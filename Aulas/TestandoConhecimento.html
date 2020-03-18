@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <script>
+            
+            class Empresa{
+                constructor (){
+                    this.nome = "ModasTotal";
+                    this.rua ="livino Juca",
+                    this.numero= 25,
+                    this.cidade="Campo Grande",
+                    this.estado="MS"                              
+                    }
+                    //metodos:
+                    enderecoCompleto(){
+                        return `Empresa: ${this.nome} Rua: ${this.rua}, Nº ${this.numero} ${this.cidade}-${this.estado}`
+                }
+            }  
+            class Cliente{
+                constructor(){
+                    this.nome = "Cleiton Duarte Gonçalves";
+                    this.cpf = "010.101.010-10";
+                    this.telefone = 998877665;                    
+                }
+                //metodos:
+                dadosCliente(){
+                        return ` ${this.nome}
+                       Cpf: ${this.cpf}
+                       Contato: ${this.telefone}`
+                    }
+            }         
+            class Produto{
+                constructor(){
+                    this.nome = "Calça";
+                    this.preco = 80.00;
+                    this.unidadeMedida = "UN";
+                    this.quantidade= 30;                                                                              
+                    }
+                                     
+                    //metodos:
+                    estoque(qtd){                                          
+                        if(qtd<=this.quantidade){
+                         this.quantidade = this.quantidade - qtd; 
+                            return true;
+                        }else{
+                          return false;
+                        }
+                    }
+                    precoTotal(qtd){
+                        var quandidade = qtd;
+                        var estoque = this.estoque(qtd);  
+                        if(estoque == true){                        
+                        let total = quandidade * this.preco;
+                        return total;
+                        }else{
+                            "Saldo insuficiente!"
+                        }
+                        
+                    };
+                    dadosProduto(text){
+                        var quantidade = text;
+
+                        return ` ${this.nome}
+                       Quantidade: ${quantidade} ${this.unidadeMedida}
+                       Preço Unitário: $${this.preco.toFixed(2)}
+                       Preço Total Produtos: $${this.precoTotal(text)}                       
+                         `
+                    };
+                }
+                
+
+            class Venda{
+                constructor(qtd){
+                    this.qtd = qtd;
+                    this.Empresa = new Empresa;
+                    this.cliente = new Cliente;
+                    this.Produto = new Produto();
+                    this.NumeroNotaFiscal = 0;                    
+                    }
+                    
+                    //metodos:
+                    NumeroNF(){
+                        this.NumeroNotaFiscal += 1;
+                        return this.NumeroNotaFiscal;
+                    }
+
+                    dadosNotaFiscal(){
+                       return `
+                       
+                       Numero Nota Fiscal: ${this.NumeroNF()}
+
+                       ${this.Empresa.enderecoCompleto()}
+                    
+                       -----------------------------------------------------------
+                       Cliente: ${this.cliente.dadosCliente()}
+                       -----------------------------------------------------------
+                       Produto: ${this.Produto.dadosProduto(this.qtd)}
+                       -----------------------------------------------------------`
+                    }
+            }
+                    
+
+            //     }
+            // }
+            let venda = new Venda(10)
+            console.log(venda.dadosNotaFiscal())
+
+        //    let p = new Produto();
+        //    p.vender(10);
+        //    console.log(p.quantidade)
+            
+           
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

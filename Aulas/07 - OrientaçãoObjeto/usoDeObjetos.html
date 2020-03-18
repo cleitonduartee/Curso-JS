@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            //Objeto criado com Functions:
+            function Pessoa(nome,sobreNome,email){
+                //Dados (Propriedades):
+                this.nome = nome;
+                this.sobreNome = sobreNome;
+                this.email = email
+
+                //Funcionalidades (Metodos)
+                this.nomeCompleto = function(){
+                    return `${this.nome} ${this.sobreNome}`
+                }
+            }
+
+            let p1 = new Pessoa("Cleiton","Duarte","Teste@hotmail.com")
+            console.log(p1.nomeCompleto())
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
