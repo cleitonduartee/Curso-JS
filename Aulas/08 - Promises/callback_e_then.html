@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+            // callback
+                    // function dividir(n1,n2,sucesso,erro){
+                    //     let d = n1 + n2;
+                    //     if(n2 !=0){
+                    //         sucesso(d);
+                    //     }else{
+                    //         erro("Impossível dividir por zero!")
+                    //     }
+                    // }
+                    // function sucesso(tex){
+                    //     console.log("Sucesso: "+ tex);
+                    // }
+                    // function erro(text){
+                    //     console.log("Erro: "+ text)
+                    // }
+                    // dividir(20,2,sucesso,erro)
+           
+           
+           //Promises:
+                    function dividir(n1,n2){
+                       return new Promise (function(resolve,reject){
+                        let r = n1/n2;
+                        if(n2 != 0){
+                            resolve(r)
+                        }else{
+                            reject('Impossivel dividir por zero!')
+                        }
+                       });                       
+                    }
+                  
+                    dividir(20,2)
+                        .then((r)=>r+(r*10/100))
+                        .then((r)=>console.log("Total: "+r))
+                        .catch((erro)=>console.log(erro))
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
